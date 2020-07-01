@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Cat/Cat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/Background.PNG" type="Texture" id=2]
@@ -7,6 +7,12 @@
 [ext_resource path="res://UI/BezelBottom.PNG" type="Texture" id=5]
 [ext_resource path="res://UI/Button.PNG" type="Texture" id=6]
 [ext_resource path="res://UI/ButtonPressed.PNG" type="Texture" id=7]
+[ext_resource path="res://UI/IconsEnabled/IconEat.PNG" type="Texture" id=8]
+[ext_resource path="res://UI/IconsEnabled/IconPlay.PNG" type="Texture" id=9]
+[ext_resource path="res://UI/IconsEnabled/IconNeedle.PNG" type="Texture" id=10]
+[ext_resource path="res://UI/IconsEnabled/IconDuck.PNG" type="Texture" id=11]
+[ext_resource path="res://UI/IconsEnabled/IconToilet.PNG" type="Texture" id=12]
+[ext_resource path="res://UI/IconsEnabled/IconSpray.PNG" type="Texture" id=13]
 
 [node name="Game" type="Node2D"]
 
@@ -44,13 +50,108 @@ __meta__ = {
 
 [node name="UI" type="CanvasLayer" parent="."]
 
+[node name="Icons" type="Control" parent="UI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -480.0
+margin_top = -600.0
+margin_right = 480.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 960, 1200 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="IconEat" type="TextureRect" parent="UI/Icons"]
+margin_left = 120.0
+margin_top = 48.0
+margin_right = 190.0
+margin_bottom = 128.0
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="IconPlay" type="TextureRect" parent="UI/Icons"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -48.0
+margin_top = 56.0
+margin_right = 29.0
+margin_bottom = 136.0
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="IconNeedle" type="TextureRect" parent="UI/Icons"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -224.0
+margin_top = 32.0
+margin_right = -147.0
+margin_bottom = 136.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="IconDuck" type="TextureRect" parent="UI/Icons"]
+anchor_top = 0.798
+anchor_bottom = 0.798
+margin_left = 120.0
+margin_top = -125.6
+margin_right = 227.0
+margin_bottom = -41.6
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="IconToilet" type="TextureRect" parent="UI/Icons"]
+anchor_left = 0.5
+anchor_top = 0.8
+anchor_right = 0.5
+anchor_bottom = 0.8
+margin_left = -40.0001
+margin_top = -128.0
+margin_right = 67.0
+margin_bottom = -44.0
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="IconSpray" type="TextureRect" parent="UI/Icons"]
+anchor_left = 1.0
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 0.8
+margin_left = -232.0
+margin_top = -144.0
+margin_right = -125.0
+margin_bottom = -39.0
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
 [node name="Button1" type="TextureButton" parent="UI"]
 anchor_top = 1.0
 anchor_bottom = 1.0
 margin_left = 48.0
-margin_top = -216.0
+margin_top = -232.0
 margin_right = 308.0
-margin_bottom = -12.0
+margin_bottom = -27.9999
 rect_rotation = -15.0
 rect_scale = Vector2( -1, 1 )
 rect_pivot_offset = Vector2( 130, 124.848 )
@@ -65,10 +166,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -130.148
-margin_top = -224.0
-margin_right = 129.852
-margin_bottom = -19.9999
+margin_left = -128.0
+margin_top = -200.0
+margin_right = 132.0
+margin_bottom = 4.00012
 rect_pivot_offset = Vector2( 130, 124.848 )
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 7 )
@@ -81,10 +182,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -304.0
-margin_top = -224.0
-margin_right = -43.9999
-margin_bottom = -20.0
+margin_left = -312.0
+margin_top = -232.0
+margin_right = -51.9999
+margin_bottom = -28.0
 rect_rotation = 15.0
 rect_pivot_offset = Vector2( 130, 124.848 )
 texture_normal = ExtResource( 6 )
