@@ -17,6 +17,10 @@ extents = Vector2( 187.875, 134.322 )
 
 [node name="Cat" type="KinematicBody2D"]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -51.6188 )
+shape = SubResource( 1 )
+
 [node name="CatBody" type="Sprite" parent="."]
 position = Vector2( 35.7424, 11.1273 )
 texture = ExtResource( 2 )
@@ -119,7 +123,3 @@ offset = Vector2( -1.54876, 24.4284 )
 position = Vector2( 118.286, 55.3842 )
 texture = ExtResource( 11 )
 offset = Vector2( -1.54876, 24.4284 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -51.6188 )
-shape = SubResource( 1 )
