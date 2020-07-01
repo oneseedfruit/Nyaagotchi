@@ -1,0 +1,125 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Cat/cat_01_sprites/CatHead.PNG" type="Texture" id=1]
+[ext_resource path="res://Cat/cat_01_sprites/CatBody.PNG" type="Texture" id=2]
+[ext_resource path="res://Cat/cat_01_sprites/CatEarRight.PNG" type="Texture" id=3]
+[ext_resource path="res://Cat/cat_01_sprites/CatEarLeft.PNG" type="Texture" id=4]
+[ext_resource path="res://Cat/cat_01_sprites/CatEyeRight.PNG" type="Texture" id=5]
+[ext_resource path="res://Cat/cat_01_sprites/CatEyeLeft.PNG" type="Texture" id=6]
+[ext_resource path="res://Cat/cat_01_sprites/CatNose.PNG" type="Texture" id=7]
+[ext_resource path="res://Cat/cat_01_sprites/CatMouth.PNG" type="Texture" id=8]
+[ext_resource path="res://Cat/cat_01_sprites/CatWhisker.PNG" type="Texture" id=9]
+[ext_resource path="res://Cat/cat_01_sprites/CatTail.PNG" type="Texture" id=10]
+[ext_resource path="res://Cat/cat_01_sprites/CatLeg.PNG" type="Texture" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 187.875, 134.322 )
+
+[node name="Cat" type="KinematicBody2D"]
+
+[node name="CatBody" type="Sprite" parent="."]
+position = Vector2( 35.7424, 11.1273 )
+texture = ExtResource( 2 )
+
+[node name="CatHead" type="Sprite" parent="CatBody"]
+position = Vector2( -55.8726, -34.2818 )
+texture = ExtResource( 1 )
+offset = Vector2( -48.8027, -56.0926 )
+
+[node name="CatEarLeft" type="Sprite" parent="CatBody/CatHead"]
+position = Vector2( -100.006, -119.849 )
+rotation = -0.321514
+texture = ExtResource( 4 )
+offset = Vector2( -15.8739, -96.0377 )
+
+[node name="CatEarRight" type="Sprite" parent="CatBody/CatHead"]
+position = Vector2( -12.6993, -135.723 )
+rotation = 0.0784161
+texture = ExtResource( 3 )
+offset = Vector2( 25.3984, -91.2755 )
+
+[node name="CatEyeLeft" type="Sprite" parent="CatBody/CatHead"]
+position = Vector2( -101.546, -86.9798 )
+texture = ExtResource( 6 )
+offset = Vector2( 3.96851, -2.3811 )
+
+[node name="CatEyeRight" type="Sprite" parent="CatBody/CatHead"]
+position = Vector2( -9.18323, -90.0928 )
+texture = ExtResource( 5 )
+offset = Vector2( -5.55591, 0 )
+
+[node name="CatNose" type="Sprite" parent="CatBody/CatHead"]
+position = Vector2( -56.1362, -48.9874 )
+texture = ExtResource( 7 )
+
+[node name="CatMouth" type="Sprite" parent="CatBody/CatHead/CatNose"]
+show_behind_parent = true
+position = Vector2( 0.793686, 15.874 )
+texture = ExtResource( 8 )
+
+[node name="CatWhiskerL1" type="Sprite" parent="CatBody/CatHead/CatNose/CatMouth"]
+position = Vector2( -55.4137, -13.7872 )
+texture = ExtResource( 9 )
+offset = Vector2( -69.472, -13.2909 )
+
+[node name="CatWhiskerL2" type="Sprite" parent="CatBody/CatHead/CatNose/CatMouth"]
+position = Vector2( -54.4688, -7.17267 )
+rotation = -0.138443
+texture = ExtResource( 9 )
+offset = Vector2( -69.472, -13.2909 )
+
+[node name="CatWhiskerL3" type="Sprite" parent="CatBody/CatHead/CatNose/CatMouth"]
+position = Vector2( -55.7287, -1.50302 )
+rotation = -0.462135
+texture = ExtResource( 9 )
+offset = Vector2( -69.472, -13.2909 )
+
+[node name="CatWhiskerR1" type="Sprite" parent="CatBody/CatHead/CatNose/CatMouth"]
+position = Vector2( 51.7081, -19.3884 )
+texture = ExtResource( 9 )
+offset = Vector2( 71.2266, -12.4453 )
+flip_h = true
+
+[node name="CatWhiskerR2" type="Sprite" parent="CatBody/CatHead/CatNose/CatMouth"]
+position = Vector2( 52.549, -13.2919 )
+rotation = 0.0975101
+texture = ExtResource( 9 )
+offset = Vector2( 71.8707, -13.0288 )
+flip_h = true
+
+[node name="CatWhiskerR3" type="Sprite" parent="CatBody/CatHead/CatNose/CatMouth"]
+position = Vector2( 50.8672, -7.1954 )
+rotation = 0.261379
+texture = ExtResource( 9 )
+offset = Vector2( 73.3136, -13.7015 )
+flip_h = true
+
+[node name="CatTail" type="Sprite" parent="CatBody"]
+position = Vector2( 126.146, -63.8144 )
+rotation = -0.381234
+texture = ExtResource( 10 )
+offset = Vector2( 17.6367, -2.77892 )
+
+[node name="CatLegFL" type="Sprite" parent="CatBody"]
+position = Vector2( -133.445, 60.8031 )
+texture = ExtResource( 11 )
+offset = Vector2( -1.54876, 24.4284 )
+
+[node name="CatLegFR" type="Sprite" parent="CatBody"]
+position = Vector2( -103.714, 62.8842 )
+texture = ExtResource( 11 )
+offset = Vector2( -1.54876, 24.4284 )
+
+[node name="CatLegBL" type="Sprite" parent="CatBody"]
+position = Vector2( 88.5554, 53.3031 )
+texture = ExtResource( 11 )
+offset = Vector2( -1.54876, 24.4284 )
+
+[node name="CatLegBR" type="Sprite" parent="CatBody"]
+position = Vector2( 118.286, 55.3842 )
+texture = ExtResource( 11 )
+offset = Vector2( -1.54876, 24.4284 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -51.6188 )
+shape = SubResource( 1 )
