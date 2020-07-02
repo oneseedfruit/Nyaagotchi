@@ -37,6 +37,9 @@ var iconsSelectedTexture
 var iconsEnabledTexture
 var iconsDisabledTexture
 
+onready var MenuTimer = get_parent().get_node("MenuTimer")
+
+
 func _ready():
 	icons = [
 		IconEat, 
@@ -82,20 +85,21 @@ func _on_ButtonSelect_pressed():
 		else:
 			icons[i].texture = iconsEnabledTexture[i]
 
+	MenuTimer.start()
 
-func _on_ButtonCancel_pressed():
+
+func _on_ButtonCancel_pressed():	
 	selected = -1
 	
 	for i in range(0, icons.size()):
 		icons[i].texture = iconsEnabledTexture[i]
 		
 	emit_signal("execute_button_pressed", selected)
+	MenuTimer.stop()
 
 
 func _on_ButtonExecute_pressed():
-	emit_signal("execute_button_pressed", selected)
-	var MenuTimer = get_parent().get_node("MenuTimer")		
-	MenuTimer.stop()
+	emit_signal("execute_button_pressed", selected)	
 	MenuTimer.start()
 
 
