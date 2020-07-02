@@ -71,6 +71,10 @@ script = ExtResource( 16 )
 [node name="MenuControl" type="Node2D" parent="."]
 script = ExtResource( 15 )
 
+[node name="MenuTimer" type="Timer" parent="."]
+wait_time = 20.0
+autostart = true
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Icons" type="Control" parent="UI"]
@@ -218,6 +222,7 @@ __meta__ = {
 }
 [connection signal="action_taken" from="ActionControl" to="Cat" method="_on_action_taken"]
 [connection signal="execute_button_pressed" from="MenuControl" to="ActionControl" method="_on_MenuControl_execute_button_pressed"]
+[connection signal="timeout" from="MenuTimer" to="MenuControl" method="_on_MenuTimer_timeout"]
 [connection signal="pressed" from="UI/ButtonSelect" to="MenuControl" method="_on_ButtonSelect_pressed"]
 [connection signal="pressed" from="UI/ButtonExecute" to="MenuControl" method="_on_ButtonExecute_pressed"]
 [connection signal="pressed" from="UI/ButtonCancel" to="MenuControl" method="_on_ButtonCancel_pressed"]

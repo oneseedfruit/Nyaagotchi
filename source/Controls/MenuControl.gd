@@ -80,7 +80,7 @@ func _on_ButtonSelect_pressed():
 		if icons[i] == icons[selected]:
 			icons[i].texture = iconsSelectedTexture[i]
 		else:
-			icons[i].texture = iconsEnabledTexture[i]		
+			icons[i].texture = iconsEnabledTexture[i]
 
 
 func _on_ButtonCancel_pressed():
@@ -94,3 +94,10 @@ func _on_ButtonCancel_pressed():
 
 func _on_ButtonExecute_pressed():
 	emit_signal("execute_button_pressed", selected)
+	var MenuTimer = get_parent().get_node("MenuTimer")		
+	MenuTimer.stop()
+	MenuTimer.start()
+
+
+func _on_MenuTimer_timeout():
+	_on_ButtonCancel_pressed()
